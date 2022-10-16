@@ -35,6 +35,9 @@
         color: hsl(219, 12%, 42%);
       }
       .attribution {
+        position: absolute;
+        left: 0px;
+        top: 0px;
         font-size: 11px;
         text-align: center;
       }
@@ -44,7 +47,7 @@
       #container {
         position: absolute;
         top: 50%;
-        height: 90vh;
+        height: 88vh;
         transform: translateY(-50%);
         background-color: hsl(0, 0%, 100%);
         display: flex;
@@ -53,7 +56,7 @@
         width: 50%;
         box-shadow: 0px 0px 20px #00000010;
       }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 900px) {
         #container {
           width: 100%;
           height: 100%;
@@ -67,13 +70,13 @@
         flex-direction: row;
 
         background-color: hsl(208, 76%, 97%);
-        margin: 0.3rem;
+        margin: 0.2rem;
         margin-left: 2rem;
         margin-right: 2rem;
         padding: 1rem;
 
-        height: 8.5em;
-        max-height: 8.5em;
+        height: 10.1em;
+        max-height: 10em;
 
         border-radius: 0.8rem;
       }
@@ -156,7 +159,7 @@
         border: 1px solid hsl(218, 14%, 84%);
         border-radius: 0.3rem;
         padding: 1rem;
-        font-weight: 600;
+        font-weight: 300;
         box-sizing: border-box;
       }
       .notification .alert {
@@ -195,7 +198,7 @@
       </div>
       <div class="notification">
         <div>
-          <img src="./assets/images/avatar-mark-webber.webp" />
+          <img alt="picture" src="./assets/images/avatar-mark-webber.webp" />
         </div>
         <div class="content">
           <span
@@ -206,7 +209,7 @@
         </div>
       </div>
       <div class="notification">
-        <img src="./assets/images/avatar-angela-gray.webp" />
+        <img alt="picture" src="./assets/images/avatar-angela-gray.webp" />
         <div class="content">
           <span>
             <span class="name">Angela Gray</span>
@@ -216,18 +219,18 @@
         </div>
       </div>
       <div class="notification">
-        <img src="./assets/images/avatar-jacob-thompson.webp" />
+        <img alt="picture" src="./assets/images/avatar-jacob-thompson.webp" />
         <div class="content">
           <span>
-            <span class="name">Jacob Thompson</span> has joined your group Chess
-            Club
+            <span class="name">Jacob Thompson</span> has joined your group
+            <span class="linkPost">Chess Club</span>
             <div class="alert"></div>
           </span>
           <span class="time">1 day ago</span>
         </div>
       </div>
       <div class="notification read">
-        <img src="./assets/images/avatar-rizky-hasanuddin.webp" />
+        <img alt="picture" src="./assets/images/avatar-rizky-hasanuddin.webp" />
         <div class="content">
           <span
             ><span class="name">Rizky Hasanuddin</span> sent you a private
@@ -241,7 +244,7 @@
         </div>
       </div>
       <div class="notification read">
-        <img src="./assets/images/avatar-kimberly-smith.webp" />
+        <img alt="picture" src="./assets/images/avatar-kimberly-smith.webp" />
         <div class="content">
           <span
             ><span class="name">Kimberly Smith</span> commented on your
@@ -249,20 +252,27 @@
           >
           <span class="time">1 week ago</span>
         </div>
-        <img class="picturePost" src="./assets/images/image-chess.webp" />
+        <img
+          alt="picture"
+          class="picturePost"
+          src="./assets/images/image-chess.webp"
+        />
       </div>
       <div class="notification read">
-        <img src="./assets/images/avatar-nathan-peterson.webp" />
+        <img alt="picture" src="./assets/images/avatar-nathan-peterson.webp" />
         <div class="content">
           <span
             ><span class="name">Nathan Peterson</span> reacted to your recent
-            post 5 end-game strategies to increase your win rate</span
+            post
+            <span class="linkPost"
+              >5 end-game strategies to increase your win rate</span
+            ></span
           >
           <span class="time">2 weeks ago</span>
         </div>
       </div>
       <div class="notification read">
-        <img src="./assets/images/avatar-anna-kim.webp" />
+        <img alt="picture" src="./assets/images/avatar-anna-kim.webp" />
         <div class="content">
           <span
             ><span class="name">Anna Kim</span> left the group Chess Club</span
