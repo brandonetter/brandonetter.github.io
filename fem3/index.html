@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Barlow+Semi+Condensed:wght@500;900&family=Caveat:wght@500&family=Hind+Madurai:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <div class="rulesModal hidden">
+      <div class="rulesModalContent">
+        <span class="rulesHeader">
+          <span>RULES</span>
+          <img
+            class="close"
+            id="closeRulesImage"
+            src="./images/icon-close.svg"
+          />
+        </span>
+        <img class="rulesImage" src="./images/image-rules.svg" />
+      </div>
+    </div>
+    <div class="header">
+      <div class="rpsText"><img src="./images/logo.svg" /></div>
+      <div class="scoreModule">
+        <div class="score">
+          <div>SCORE</div>
+          <div class="scoreValue">0</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game">
+      <div id="gameState">
+        <div id="screen2">
+          <div class="pickedDisplay" id="youPicked">
+            <span>YOU PICKED</span>
+            <div class="imageDiv" id="pickedIcon">
+              <div class="hoverSelect hs"></div>
+
+              <div class="hoverSelect2 hs"></div>
+              <div class="hoverSelect3 hs"></div>
+              <div class="specialShadow3 sel"></div>
+              <div class="specialShadow1 sel"></div>
+              <div class="specialShadow2 sel"></div>
+              <img src="./images/icon-paper.svg" />
+            </div>
+          </div>
+          <div id="winLoseButtonDiv">
+            <span id="winLoseText">YOU WIN</span>
+            <div id="playAgain"><span>PLAY AGAIN</span></div>
+          </div>
+          <div class="pickedDisplay" id="housePicked">
+            <span>THE HOUSE PICKED</span>
+            <div class="emptyPick">
+              <div class="imageDiv housePicked" id="housePickedIcon">
+                <div class="hoverSelect hs"></div>
+
+                <div class="hoverSelect2 hs"></div>
+                <div class="hoverSelect3 hs"></div>
+                <div class="specialShadow3 sel"></div>
+                <div class="specialShadow1 sel"></div>
+                <div class="specialShadow2 sel"></div>
+                <img src="./images/icon-paper.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gameRow1">
+          <div class="imageDiv" id="paper">
+            <div class="hoverSelect hs"></div>
+
+            <div class="hoverSelect2 hs"></div>
+            <div class="hoverSelect3 hs"></div>
+            <div class="specialShadow3 paper"></div>
+            <div class="specialShadow1 paper"></div>
+            <div class="specialShadow2 paper"></div>
+            <img src="./images/icon-paper.svg" />
+          </div>
+          <div class="imageDiv" id="scissors">
+            <div class="hoverSelect hs"></div>
+
+            <div class="hoverSelect2 hs"></div>
+            <div class="hoverSelect3 hs"></div>
+            <div class="specialShadow3 scissors"></div>
+            <div class="specialShadow1 scissors"></div>
+            <div class="specialShadow2 scissors"></div>
+            <img src="./images/icon-scissors.svg" />
+          </div>
+        </div>
+        <div class="gameRow2">
+          <div class="imageDiv" id="rock">
+            <div class="hoverSelect hs"></div>
+
+            <div class="hoverSelect2 hs"></div>
+            <div class="hoverSelect3 hs"></div>
+            <div class="specialShadow3 rock"></div>
+            <div class="specialShadow1 rock"></div>
+            <div class="specialShadow2 rock"></div>
+
+            <img src="./images/icon-rock.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="rulesButton">RULES</div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Brandon Etter</a>.
+    </div>
+  </body>
+</html>
