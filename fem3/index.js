@@ -104,7 +104,7 @@ document.getElementById("playAgain").addEventListener("click", () => {
   document.getElementById("housePickedIcon").classList.add("housePicked");
   let highlights = document.querySelectorAll("#youPicked .hs");
   let highlights2 = document.querySelectorAll("#housePicked .hs");
-  Array.from(highlights).push(...Array.from(highlights2));
+  highlights = Array.from(highlights).push(...Array.from(highlights2));
   let size = 20;
   for (let i of highlights) {
     i.style.width = size + "%";
