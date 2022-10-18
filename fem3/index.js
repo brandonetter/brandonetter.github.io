@@ -104,20 +104,18 @@ document.getElementById("playAgain").addEventListener("click", () => {
   document.getElementById("housePickedIcon").classList.add("housePicked");
   let highlights = document.querySelectorAll("#youPicked .hs");
   let highlights2 = document.querySelectorAll("#housePicked .hs");
-  let size = 20;
+
   for (let i of highlights) {
-    i.style.width = size + "%";
+    i.style.width = 0 + "%";
     i.style.opacity = 0.3;
-    i.style.height = size + "%";
+    i.style.height = 0 + "%";
     i.classList.remove("hs2");
-    size += 30;
   }
   for (let i of highlights2) {
-    i.style.width = size + "%";
+    i.style.width = 0 + "%";
     i.style.opacity = 0.3;
-    i.style.height = size + "%";
+    i.style.height = 0 + "%";
     i.classList.remove("hs2");
-    size += 30;
   }
   housePicked = document.getElementById("housePicked");
   youPicked = document.getElementById("youPicked");
