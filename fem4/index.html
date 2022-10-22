@@ -1,0 +1,425 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@1000&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="mountains">
+    <img src="./images/pattern-hills.svg" />
+    <div class="social">
+      <img src="./images/icon-facebook.svg" /><img
+        src="./images/icon-pinterest.svg"
+      /><img src="./images/icon-instagram.svg" />
+    </div>
+  </div>
+  <div class="header"><h1>WE'RE LAUNCHING SOON</h1></div>
+  <div class="timer">
+    <div>
+      <div class="blackBox">
+        <div class="dot left"></div>
+
+        <div class="dot right"></div>
+        <div class="flipperContainer">
+          <div class="topflip"><span>08</span></div>
+          <div class="flipper">
+            <div class="topSide"><span>08</span></div>
+            <div class="bottomSide"><span>08</span></div>
+          </div>
+          <div class="bottomflip"><span>08</span></div>
+        </div>
+      </div>
+      <div class="time">DAYS</div>
+    </div>
+    <div>
+      <div class="blackBox">
+        <div class="dot left"></div>
+
+        <div class="dot right"></div>
+        <div class="flipperContainer">
+          <div class="topflip"><span>22</span></div>
+          <div class="flipper">
+            <div class="topSide"><span>22</span></div>
+            <div class="bottomSide"><span>22</span></div>
+          </div>
+          <div class="bottomflip"><span>22</span></div>
+        </div>
+      </div>
+      <div class="time">HOURS</div>
+    </div>
+    <div>
+      <div class="blackBox">
+        <div class="dot left"></div>
+
+        <div class="dot right"></div>
+        <div class="flipperContainer">
+          <div class="topflip"><span>13</span></div>
+          <div class="flipper">
+            <div class="topSide"><span>13</span></div>
+            <div class="bottomSide"><span>13</span></div>
+          </div>
+          <div class="bottomflip"><span>13</span></div>
+        </div>
+      </div>
+      <div class="time">MINUTES</div>
+    </div>
+    <div>
+      <div class="blackBox">
+        <div class="dot left"></div>
+
+        <div class="dot right"></div>
+        <div class="flipperContainer">
+          <div class="topflip"><span>14</span></div>
+          <div class="flipper">
+            <div class="topSide"><span>15</span></div>
+            <div class="bottomSide"><span>14</span></div>
+          </div>
+          <div class="bottomflip"><span>15</span></div>
+        </div>
+      </div>
+      <div class="time">SECONDS</div>
+    </div>
+  </div>
+</body>
+<style>
+  body {
+    background: linear-gradient(#1e1e28, #2f2538);
+    font-family: "Red Hat Text", sans-serif;
+    color: white;
+    overflow: hidden;
+  }
+
+  .header {
+    height: 30vh;
+    width: 100vw;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    letter-spacing: 8px;
+    filter: drop-shadow(1px 1px 3px black);
+  }
+  .mountains {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 30;
+  }
+  .mountains img {
+    transform: translateY(-100%);
+    width: 100vw;
+    height: 25%;
+  }
+  .social {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 25%;
+    width: 10%;
+    left: 50%;
+    transform: translateY(-130%) translateX(-50%);
+    z-index: 200;
+  }
+  .mountains .social img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .mountains .social img:hover {
+    width: 2rem;
+    height: 2rem;
+    filter: hue-rotate(80deg) saturate(300%);
+    cursor: pointer;
+  }
+  .stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -2;
+    background-image: url("./images/bg-stars.svg");
+  }
+  .timer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 80vh;
+  }
+  .blackBox {
+    user-select: none;
+    position: relative;
+    width: 220px;
+    height: 200px;
+    /* top: 50%; */
+    transform: scale(0.85) scaleY(1.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    overflow: hidden;
+  }
+  .time {
+    user-select: none;
+    position: relative;
+    color: #858590;
+    font-size: 20px;
+    font-weight: 600;
+    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.599));
+    letter-spacing: 3px;
+    z-index: 200;
+    width: 100%;
+    top: 40px;
+    text-align: center;
+  }
+  .dot {
+    position: absolute;
+    z-index: 10;
+
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: rgb(22, 22, 25);
+  }
+  .dot.left {
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .dot.right {
+    left: 100%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .topSide {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 26px;
+    left: 0px;
+    overflow: hidden;
+    width: 100%;
+    height: 150%;
+    background-color: #2c2c44;
+    /* backface-visibility: hidden; */
+    /* -webkit-backface-visibility: hidden; */
+    transition: transform 0.25s;
+    border-radius: 1rem 1rem 15px 15px;
+    /* transform-origin: bottom; */
+  }
+  .bottomSide {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    top: 24px;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 150%;
+    color: hsl(345, 97%, 74%);
+    /* transform-origin: top; */
+    background-color: #34364f;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotate3d(1, 0, 0, -180deg) scaleY(-1);
+    transition: transform 0.25s;
+    border-radius: 1rem 1rem 15px 15px;
+  }
+  .flipper {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #2c2c44; */
+    transform: rotateX(-35deg);
+    transform-origin: bottom;
+    overflow: hidden;
+    transition: all 0.25s;
+    border-radius: 15px;
+  }
+  .flipperContainer {
+    color: hsl(345, 95%, 68%);
+    font-family: "Red Hat Text", sans-serif;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 15px;
+    height: 200px;
+    font-size: 130px;
+    font-weight: bolder;
+    padding: 0;
+
+    /* perspective: 420px; */
+
+    filter: drop-shadow(0px 5px 8px rgb(22, 22, 25));
+  }
+  .topFlip {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    perspective: 200px;
+    background-color: #2c2c44;
+    transform: rotateX(-35deg);
+    transform-origin: bottom;
+    overflow: hidden;
+    transition: transform 0.25s;
+    border-radius: 1rem 1rem 15px 15px;
+  }
+  .bottomFlip {
+    position: absolute;
+    color: hsl(345, 97%, 74%);
+    top: 100px;
+    perspective: 200px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    background-color: #34364f;
+    transform: rotate3d(1, 0, 0, 35deg);
+    transform-origin: top;
+    overflow: hidden;
+    border-radius: 1rem 1rem 15px 15px;
+  }
+  .topFlip span,
+  .topFlip2 span,
+  .topFlip3 span,
+  .topFlip4 span {
+    position: relative;
+    top: 26px;
+    filter: drop-shadow(3px 3px 1px rgb(22, 22, 25));
+  }
+  .topSide span {
+    filter: drop-shadow(3px 3px 1px rgb(22, 22, 25));
+  }
+  .bottomSide span {
+    filter: drop-shadow(3px 3px 1px rgb(22, 22, 25));
+  }
+  .bottomFlip span,
+  .bottomFlip2 span .bottomFlip3 span,
+  .bottomFlip4 span {
+    position: relative;
+    top: -74px;
+    filter: drop-shadow(3px 3px 1px rgb(22, 22, 25));
+  }
+</style>
+<script>
+  let intervalss = [];
+  function initNumCalc(i, val) {
+    if (i === 0) return val * 500;
+    let intervalMod = i * 1000 * 4 - 1000 * i;
+    console.log(500 * val + 2000);
+    return 500 * val + 40000;
+  }
+  function mod(n, m) {
+    let v = n % m;
+    return v >= 0 ? v : v + m;
+  }
+  let curNum = [13, 15];
+  let initNum = [2, 2];
+  deg = [-35, -35];
+  let degCounter = [0, 0];
+  let degSteps = [-111, -249];
+  let sideFlips = [-180, 0];
+
+  flippers = Array.from(document.querySelectorAll(".flipper")).slice(2, 4);
+  for (let flipper of flippers) {
+    flipper.style.zIndex = 3;
+  }
+  bottomSides = Array.from(document.querySelectorAll(".bottomSide")).slice(
+    2,
+    4
+  );
+  bottomFlips = Array.from(document.querySelectorAll(".bottomFlip")).slice(
+    2,
+    4
+  );
+  topFlips = Array.from(document.querySelectorAll(".topSide")).slice(2, 4);
+  topSides = Array.from(document.querySelectorAll(".topFlip")).slice(2, 4);
+  setInterval(() => {
+    for (let flipper of flippers) {
+      if (flipper.style.zIndex < 1) {
+        flipper.style.opacity = 0;
+      } else {
+        flipper.style.opacity = 1;
+      }
+    }
+  }, 10);
+
+  let numCounts = 0;
+
+  function setFlip(i) {
+    i = Math.abs(i - 1);
+
+    let flipper = flippers[i];
+    let bottomSide = bottomSides[i];
+    let topSide = topSides[i];
+    let bottomFlip = bottomFlips[i];
+    let topFlip = topFlips[i];
+    for (let j = 1; j < 3; j++) {
+      let a = setTimeout(() => {
+        deg[i] += degSteps[degCounter[i]];
+        if (degCounter[i] === 0) {
+          let nm = curNum[i] - 1 || 59;
+          topSide.children[0].innerText = String(nm).padStart(2, "0");
+        }
+        // test.style.transform = `rotate3d(1,0,0,${deg}deg)`;
+        degCounter[i] = mod(++degCounter[i], degSteps.length);
+
+        flipper.style.transform = `rotate3d(1,0,0,${deg[i]}deg)`;
+        bottomSide.style.transform = `rotate3d(1,0,0,${
+          sideFlips[degCounter[i]]
+        }deg) scaleY(-1)`;
+        setTimeout(
+          () => {
+            flipper.style.zIndex = 2 - degCounter[i] * 2;
+            if (degCounter[i] === 1) {
+              curNum[i] -= 1;
+              if (curNum[i] < 1) curNum[i] = 59;
+              let nm = curNum[i];
+              nm = String(nm).padStart(2, "0");
+              bottomFlip.children[0].innerText = nm;
+
+              topFlip.children[0].innerText = nm;
+            } else {
+              //flipper.style.backgroundColor = "#2C2C44";
+              // setTimeout(
+              //   () => (//flipper.style.backgroundColor = "#34364F"),
+              //   255 + i * 1200
+              // );
+              let nm = curNum[i] - 1 || 59;
+              nm = String(nm).padStart(2, "0");
+              bottomSide.children[0].innerText = nm;
+            }
+          },
+          initNum[i] > 1 ? --initNum[i] : 250
+        );
+      }, 500 * j);
+    }
+  }
+
+  setInterval(() => setFlip(0), 1000);
+  setTimeout(() => {
+    setFlip(1);
+    setInterval(() => setFlip(1), 59000);
+  }, 15000);
+  // setInterval(() => {
+</script>
