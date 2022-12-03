@@ -556,13 +556,25 @@ for(let g of groups){
     let p1 = await Group.findAll({
     include: {
         model: Image,
-        attributes:['groupId','url']
+        attributes: ['groupId', 'url']
     },
-    attributes:{
-        exclude:['createdAt','updatedAt']
+    attributes: {
+        exclude: ['createdAt', 'updatedAt']
+    }
+});
+
+
+let p2 = await Event.findAll({
+    include: {
+        model: Image,
+        attributes: ['eventId', 'url']
+    },
+    attributes: {
+        exclude: ['createdAt', 'updatedAt']
     }
 });
 console.log(p1);
+console.log(p2);
     `);
     beautify.beautify(editor.session);
     beautify.beautify(editorAssociations.session);
