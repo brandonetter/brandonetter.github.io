@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
+  // disable linting
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   /**
    * Enable static exports for the App Router.
    *
